@@ -1,7 +1,12 @@
 import "./App.css";
+import GameDashboard from "./components/GameDashboard/GameDashboard";
 
 function App() {
-  return <></>;
+  return (
+    <article>
+      <GameDashboard />
+    </article>
+  );
 }
 
 export default App;

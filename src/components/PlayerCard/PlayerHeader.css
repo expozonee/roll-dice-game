@@ -1,0 +1,17 @@
+.p-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50%;
+}
+
+.player-title {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.player-score {
+  font-size: 5rem;
+  text-align: center;
+}

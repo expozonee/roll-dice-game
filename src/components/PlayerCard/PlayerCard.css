@@ -1,0 +1,11 @@
+.card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.card > * {
+  height: 50%;
+}
