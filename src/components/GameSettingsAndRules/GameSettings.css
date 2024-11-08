@@ -40,7 +40,7 @@ input::placeholder {
 
 .error-msg {
   color: firebrick;
-  font-size: clamp(1.5rem, 5vw, 3.5rem);
+  font-size: clamp(1rem, 4vw, 3.5rem);
 }
 
 @media (max-width: 370px) {
