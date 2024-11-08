@@ -15,9 +15,11 @@ const playersData = [
 ];
 
 export default function GameDashboard() {
-  const { useCurrentPlayer, usePlayersScore } = useGameContext();
+  const { useCurrentPlayer, usePlayersScore, useGameSettings } =
+    useGameContext();
   const [currentPlayer, setCurrentPlayer] = useCurrentPlayer();
   const [playersScore, setPlayersScore] = usePlayersScore();
+  const [gameSettings] = useGameSettings();
 
   const isThereAWinner = playersScore.some(
     (playerScore) => playerScore.isWinner
@@ -25,6 +27,8 @@ export default function GameDashboard() {
 
   return (
     <section className="game-dashboard">
+      <p className="max-score">The max score is: {+gameSettings.maxScore!}</p>
+
       {playersData.map((data, index) => {
         return (
           <PlayerCard
