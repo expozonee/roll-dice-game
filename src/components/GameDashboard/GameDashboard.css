@@ -8,8 +8,22 @@ section {
   align-items: center;
 }
 
-section > * {
+section > *:not(p) {
   width: 50%;
+}
+
+.max-score {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 1000px) {
@@ -39,5 +53,11 @@ section > * {
 
   .game-dashboard .card:last-of-type {
     grid-area: playerTwo;
+  }
+
+  .max-score {
+    top: -5%;
+    width: 60%;
+    font-size: clamp(0.6rem, 4vw, 3rem);
   }
 }
