@@ -1,13 +1,23 @@
 import "./App.css";
 import GameDashboard from "./components/GameDashboard/GameDashboard";
-import GameProvider from "./Providers/GameProvider";
+import GameSettingsAndRules from "./components/GameSettingsAndRules/GameSettingsAndRules";
+import { useGameContext } from "./Providers/GameProvider";
 
 function App() {
+  const { useGameSettings } = useGameContext();
+  const [gameSettings] = useGameSettings();
+
+  if (!gameSettings.isGameStarted) {
+    return (
+      <article>
+        <GameSettingsAndRules />
+      </article>
+    );
+  }
+
   return (
     <article>
-      <GameProvider>
-        <GameDashboard />
-      </GameProvider>
+      <GameDashboard />
     </article>
   );
 }

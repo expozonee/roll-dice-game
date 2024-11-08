@@ -1,6 +1,6 @@
 .game-settings h3 {
-  font-size: 3rem;
-  margin-bottom: 2rem;
+  font-size: clamp(1.3rem, 7vw, 3rem);
+  margin-bottom: 0.2rem;
 }
 
 input {
@@ -11,7 +11,7 @@ input {
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
-  color: #fff;
+  color: black;
   font-size: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

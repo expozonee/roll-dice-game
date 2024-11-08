@@ -45,6 +45,7 @@ img {
     margin: 0;
     height: 10vh;
     width: 10vh;
+    border-radius: 0.5rem;
   }
 
   img:first-of-type {

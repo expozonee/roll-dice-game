@@ -2,7 +2,6 @@ import "./GameDashboard.css";
 import PlayerCard from "../PlayerCard/PlayerCard";
 import GameButtons from "../GameButtons/GameButtons";
 import { useGameContext } from "../../Providers/GameProvider";
-import GameSettingsAndRules from "../GameSettingsAndRules/GameSettingsAndRules";
 
 const playersData = [
   {
@@ -26,8 +25,6 @@ export default function GameDashboard() {
 
   return (
     <section className="game-dashboard">
-      <GameSettingsAndRules />
-
       {playersData.map((data, index) => {
         return (
           <PlayerCard

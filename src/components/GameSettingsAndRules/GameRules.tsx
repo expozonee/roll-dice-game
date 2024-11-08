@@ -27,17 +27,6 @@ export default function GameRules() {
         <li>
           Libero obcaecati odio modi rem dicta ipsum officiis iste ducimus!
         </li>
-        <li>
-          Cum nobis nihil, aspernatur illum consequatur deleniti voluptate
-          reprehenderit vel?
-        </li>
-        <li>
-          Consectetur vel iusto aperiam necessitatibus. Dolor saepe sequi
-          deleniti illum?
-        </li>
-        <li>
-          Quasi ut voluptates dolores veritatis culpa nulla mollitia neque illo.
-        </li>
       </ul>
     </div>
   );
