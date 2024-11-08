@@ -44,3 +44,9 @@ section .card.lost {
     grid-area: playerTwo;
   }
 }
+
+@media (max-width: 370px) {
+  .card {
+    padding: 0;
+  }
+}

@@ -1,6 +1,5 @@
 .current-score {
   background-color: rgba(2, 17, 51, 0.5);
-
   height: 50%;
   max-height: 130px;
   width: 80%;
@@ -10,6 +9,10 @@
   padding: 1rem 2rem;
   text-align: center;
   border-radius: 0.5rem;
+}
+
+h3 {
+  font-size: clamp(1rem, 1.3vw, 1.5rem);
 }
 
 p {
