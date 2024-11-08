@@ -33,7 +33,7 @@ section .card.lost {
   .card {
     width: 100%;
     padding: 1rem;
-    height: 90%;
+    height: 80%;
   }
 
   .game-dashboard .card:first-of-type {
