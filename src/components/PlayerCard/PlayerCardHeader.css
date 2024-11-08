@@ -8,7 +8,7 @@
 .player-title {
   font-size: clamp(0.6rem, 4vw, 4.5rem);
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
