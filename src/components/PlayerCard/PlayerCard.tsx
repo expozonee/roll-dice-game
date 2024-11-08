@@ -2,30 +2,30 @@ import PlayerScore from "./PlayerCurrentScore";
 import PlayerCardHeader from "./PlayerCardHeader";
 import "./PlayerCard.css";
 
-type PlayerCardProps = {
-  title: string;
-  playersScore: {
-    playerId: number;
-    score: number;
-    currentScore: number;
-  };
-  isCurrentPlayer: boolean;
-};
+// types
+import type { PlayerCardProps } from "../../types/PlayerCardProps";
 
 export default function PlayerCard({
   title,
   isCurrentPlayer,
-  playersScore,
+  playerScore,
+  isThereAWinner,
 }: PlayerCardProps) {
-  console.log("re render");
-
   return (
     <div
-      style={{ backgroundColor: isCurrentPlayer ? "rgba(0,0,0,0.3)" : "" }}
-      className={`card ${isCurrentPlayer ? "active" : ""}`}
+      style={{
+        backgroundColor: isCurrentPlayer ? "rgba(0,0,0,0.3)" : "",
+      }}
+      className={`card ${!isThereAWinner && isCurrentPlayer ? "active" : ""} ${
+        isThereAWinner ? (playerScore.isWinner ? "winner" : "lost") : ""
+      }`}
     >
-      <PlayerCardHeader title={title} score={playersScore.score} />
-      <PlayerScore score={playersScore.currentScore} />
+      <PlayerCardHeader
+        isWinner={playerScore.isWinner}
+        title={title}
+        score={playerScore.score}
+      />
+      <PlayerScore score={playerScore.currentScore} />
     </div>
   );
 }

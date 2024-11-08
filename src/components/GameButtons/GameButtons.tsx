@@ -1,16 +1,23 @@
 import "./GameButtons.css";
+import { useGameContext } from "../../Providers/GameProvider";
 
 // types
 import type { GameButtonsProps } from "../../types/GameButtonsProps";
-import { useGameContext } from "../../Providers/GameProvider";
 
 export default function GameButtons({
   currentPlayer,
+  playersScore,
   setPlayersScore,
   changePlayer,
 }: GameButtonsProps) {
-  const { useDices } = useGameContext();
+  const { useDices, useGameSettings, resetGame } = useGameContext();
   const [dices, setDices] = useDices();
+  const [gameSettings] = useGameSettings();
+  const maxScore = +gameSettings.maxScore!;
+
+  const isThereAWinner = playersScore.some(
+    (playerScore) => playerScore.isWinner
+  );
 
   function RollDiceHandleClick() {
     const randomNumber1 = Math.floor(Math.random() * 6) + 1;
@@ -23,8 +30,12 @@ export default function GameButtons({
 
     setPlayersScore((prev) => {
       const playersScore = [...prev];
-      playersScore[currentPlayer - 1].currentScore +=
-        randomNumber1 + randomNumber2;
+      playersScore[currentPlayer - 1].currentScore =
+        randomNumber1 === randomNumber2
+          ? 0
+          : playersScore[currentPlayer - 1].currentScore +
+            randomNumber1 +
+            randomNumber2;
 
       return playersScore;
     });
@@ -37,6 +48,10 @@ export default function GameButtons({
         playersScore[currentPlayer - 1].score +
         playersScore[currentPlayer - 1].currentScore;
       playersScore[currentPlayer - 1].currentScore = 0;
+      playersScore[currentPlayer - 1].isWinner =
+        playersScore[currentPlayer - 1].score >= maxScore;
+      console.log(playersScore);
+
       return playersScore;
     });
 
@@ -45,12 +60,24 @@ export default function GameButtons({
 
   return (
     <div className="game-buttons">
-      <button>New Game</button>
+      <button
+        style={{
+          backgroundColor: isThereAWinner ? "var(--primary-color)" : "",
+          color: isThereAWinner ? "white" : "",
+        }}
+        onClick={resetGame}
+      >
+        New Game
+      </button>
       <img src={`images/dice-${dices.diceOne}.png`} alt="dice-image" />
       <img src={`images/dice-${dices.diceTwo}.png`} alt="dice-image" />
 
-      <button onClick={RollDiceHandleClick}>Roll Dice</button>
-      <button onClick={HoldBtnHandleClick}>Hold</button>
+      <button disabled={isThereAWinner} onClick={RollDiceHandleClick}>
+        Roll Dice
+      </button>
+      <button disabled={isThereAWinner} onClick={HoldBtnHandleClick}>
+        Hold
+      </button>
     </div>
   );
 }

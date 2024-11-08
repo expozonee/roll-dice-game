@@ -15,6 +15,15 @@
   color: white;
 }
 
+.card.winner {
+  background-color: limegreen;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+section .card.lost {
+  opacity: 0.5;
+}
+
 .card > *:not(:last-child) {
   height: 50%;
 }
