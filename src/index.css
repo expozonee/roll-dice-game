@@ -9,6 +9,7 @@
 :root {
   --primary-color: #0a2083;
   --secondary-color: #3562c4;
+  overflow: hidden;
 }
 
 body {
