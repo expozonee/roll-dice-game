@@ -12,7 +12,7 @@ export default function GameSettings({
     const formData = new FormData(e.target);
     const maxScore = formData.get("max-score");
 
-    if (!maxScore) {
+    if (!maxScore || !Number.isInteger(maxScore)) {
       setError(true);
       return;
     }
