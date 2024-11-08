@@ -6,7 +6,7 @@
 }
 
 .player-title {
-  font-size: clamp(0.6rem, 3vw, 4.5rem);
+  font-size: clamp(0.6rem, 4vw, 4.5rem);
   text-transform: uppercase;
   margin-bottom: 2rem;
   text-align: center;
@@ -19,7 +19,7 @@
 
 .winner-text {
   text-align: center;
-  font-size: clamp(0.6rem, 6vw, 2.5rem);
+  font-size: clamp(0.6rem, 4vw, 2.5rem);
   margin-top: -2rem;
   margin-bottom: 2rem;
 }
