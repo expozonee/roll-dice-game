@@ -1,0 +1,25 @@
+.game-rules-settings {
+  width: 80vw;
+  z-index: 1000;
+  backdrop-filter: blur(40px);
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.game-rules-settings li {
+  text-align: left;
+}
+
+@media (max-width: 1000px) {
+  .game-rules-settings {
+    padding: 1rem;
+  }
+}

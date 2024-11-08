@@ -1,0 +1,52 @@
+.card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.card.active {
+  background-image: radial-gradient(
+    circle at center,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.card.winner {
+  background-color: limegreen;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+section .card.lost {
+  opacity: 0.5;
+}
+
+.card > *:not(:last-child) {
+  height: 50%;
+}
+
+@media (max-width: 1000px) {
+  .card {
+    width: 100%;
+    padding: 1rem;
+    height: 100%;
+  }
+
+  .game-dashboard .card:first-of-type {
+    grid-area: playerOne;
+  }
+
+  .game-dashboard .card:last-of-type {
+    grid-area: playerTwo;
+  }
+}
+
+@media (max-width: 370px) {
+  .card {
+    padding: 0;
+  }
+}

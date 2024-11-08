@@ -1,0 +1,25 @@
+.p-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50%;
+}
+
+.player-title {
+  font-size: clamp(1rem, 6vw, 4.5rem);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.player-score {
+  font-size: clamp(1rem, 12vw, 5rem);
+  text-align: center;
+}
+
+.winner-text {
+  text-align: center;
+  font-size: clamp(1.3rem, 6vw, 2.5rem);
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+}

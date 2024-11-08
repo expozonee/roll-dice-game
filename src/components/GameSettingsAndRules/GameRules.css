@@ -1,0 +1,12 @@
+.game-rules h3 {
+  font-size: clamp(1rem, 8vw, 3rem);
+  margin-bottom: 2rem;
+}
+
+ul {
+  padding: 0.8rem;
+}
+
+.game-rules li {
+  font-size: clamp(0.8rem, 3vh, 1rem);
+}
