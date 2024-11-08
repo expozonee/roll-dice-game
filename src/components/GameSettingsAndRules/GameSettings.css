@@ -1,5 +1,5 @@
 .game-settings h3 {
-  font-size: clamp(1.3rem, 7vw, 3rem);
+  font-size: clamp(1.3rem, 6vw, 3rem);
   margin-bottom: 0.2rem;
 }
 
