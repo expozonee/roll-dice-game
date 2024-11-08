@@ -1,6 +1,6 @@
 section {
   width: 100vw;
-  min-height: 100dvh;
+  height: 90dvh;
   max-width: 1400px;
   background-color: rgba(255, 255, 255, 0.5);
   display: flex;
@@ -18,8 +18,7 @@ section > * {
     grid-template-areas:
       "playerOne playerTwo"
       "buttons buttons";
-    row-gap: 1rem;
-    grid-template-rows: 70vh 20vh;
+    grid-template-rows: 65vh 23vh;
   }
 
   section {

@@ -19,7 +19,6 @@ button {
 
 img {
   width: 150px;
-  /* height: 150px; */
   object-fit: cover;
   margin: 2rem auto;
   aspect-ratio: 1/1;
