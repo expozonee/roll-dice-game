@@ -17,7 +17,7 @@ export default function PlayerCard({
   isCurrentPlayer,
   playersScore,
 }: PlayerCardProps) {
-  console.log("rerender");
+  console.log("re render");
 
   return (
     <div

@@ -1,18 +1,16 @@
 import "./GameButtons.css";
-import { useState } from "react";
 
 // types
 import type { GameButtonsProps } from "../../types/GameButtonsProps";
+import { useGameContext } from "../../Providers/GameProvider";
 
 export default function GameButtons({
   currentPlayer,
   setPlayersScore,
   changePlayer,
 }: GameButtonsProps) {
-  const [dices, setDices] = useState({
-    diceOne: 1,
-    diceTwo: 2,
-  });
+  const { useDices } = useGameContext();
+  const [dices, setDices] = useDices();
 
   function RollDiceHandleClick() {
     const randomNumber1 = Math.floor(Math.random() * 6) + 1;

@@ -1,10 +1,13 @@
 import "./App.css";
 import GameDashboard from "./components/GameDashboard/GameDashboard";
+import GameProvider from "./Providers/GameProvider";
 
 function App() {
   return (
     <article>
-      <GameDashboard />
+      <GameProvider>
+        <GameDashboard />
+      </GameProvider>
     </article>
   );
 }
