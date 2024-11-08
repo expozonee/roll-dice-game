@@ -1,5 +1,5 @@
-import PlayerScore from "./PlayerScore";
-import PlayerHeader from "./PlayerHeader";
+import PlayerScore from "./PlayerCurrentScore";
+import PlayerCardHeader from "./PlayerCardHeader";
 import "./PlayerCard.css";
 
 type PlayerCardProps = {
@@ -22,9 +22,9 @@ export default function PlayerCard({
   return (
     <div
       style={{ backgroundColor: isCurrentPlayer ? "rgba(0,0,0,0.3)" : "" }}
-      className="card"
+      className={`card ${isCurrentPlayer ? "active" : ""}`}
     >
-      <PlayerHeader title={title} score={playersScore.score} />
+      <PlayerCardHeader title={title} score={playersScore.score} />
       <PlayerScore score={playersScore.currentScore} />
     </div>
   );

@@ -6,6 +6,11 @@
   height: 100vh;
 }
 
-.card > * {
+.card.active {
+  background-image: radial-gradient(circle at center, #3562c4, #0a2083);
+  color: white;
+}
+
+.card > *:not(:last-child) {
   height: 50%;
 }

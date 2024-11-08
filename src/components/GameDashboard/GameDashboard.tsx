@@ -1,13 +1,11 @@
+import "./GameDashboard.css";
 import { useState } from "react";
 import PlayerCard from "../PlayerCard/PlayerCard";
-import "./GameDashboard.css";
 import GameButtons from "../GameButtons/GameButtons";
 
-export type PlayerScoreType = {
-  playerId: number;
-  score: number;
-  currentScore: number;
-};
+// types
+import type { PlayerScoreType } from "../../types/PlayerScoreType";
+import type { CurrentPlayerIndex } from "../../types/currentPlayerIndex";
 
 const playersData = [
   {
@@ -19,8 +17,6 @@ const playersData = [
     name: "Player 2",
   },
 ];
-
-export type currentPlayerIndex = 1 | 2;
 
 export default function GameDashboard() {
   const [playersScore, setPlayersScore] = useState<PlayerScoreType[]>([
@@ -35,9 +31,7 @@ export default function GameDashboard() {
       currentScore: 0,
     },
   ]);
-  const [currentPlayer, setCurrentPlayer] = useState<currentPlayerIndex>(1);
-
-  // console.log(playersScore);
+  const [currentPlayer, setCurrentPlayer] = useState<CurrentPlayerIndex>(1);
 
   return (
     <section>
