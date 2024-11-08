@@ -37,3 +37,8 @@ input::placeholder {
 .start-game-btn:hover {
   background-color: var(--secondary-color);
 }
+
+.error-msg {
+  color: firebrick;
+  font-size: clamp(1.5rem, 5vw, 3.5rem);
+}
