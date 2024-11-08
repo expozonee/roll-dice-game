@@ -2,18 +2,18 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 50%;
+  height: 60%;
 }
 
 .player-title {
-  font-size: clamp(1rem, 6vw, 4.5rem);
+  font-size: clamp(0.7rem, 5vw, 4.5rem);
   text-transform: uppercase;
   margin-bottom: 2rem;
   text-align: center;
 }
 
 .player-score {
-  font-size: clamp(1rem, 12vw, 5rem);
+  font-size: clamp(0.6rem, 12vw, 5rem);
   text-align: center;
 }
 

@@ -1,5 +1,5 @@
 .game-rules h3 {
-  font-size: clamp(1rem, 7vw, 3rem);
+  font-size: clamp(1rem, 4.5vw, 3rem);
 }
 
 ul {

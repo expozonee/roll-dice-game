@@ -1,5 +1,5 @@
 .game-settings h3 {
-  font-size: clamp(1.3rem, 6vw, 3rem);
+  font-size: clamp(1rem, 4.5vw, 3rem);
   margin-bottom: 0.2rem;
 }
 
@@ -41,4 +41,10 @@ input::placeholder {
 .error-msg {
   color: firebrick;
   font-size: clamp(1.5rem, 5vw, 3.5rem);
+}
+
+@media (max-width: 370px) {
+  .start-game-btn {
+    font-size: 0.75rem;
+  }
 }

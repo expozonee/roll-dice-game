@@ -21,7 +21,11 @@
 
 @media (max-width: 1000px) {
   .game-rules-settings {
-    height: 80dvh;
+    height: 85dvh;
     padding: 1rem;
+  }
+
+  .game-rules-settings h1 {
+    font-size: clamp(1rem, 4vw, 4rem);
   }
 }
