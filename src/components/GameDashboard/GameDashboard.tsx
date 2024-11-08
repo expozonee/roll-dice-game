@@ -25,14 +25,9 @@ export default function GameDashboard() {
   );
 
   return (
-    <section>
+    <section className="game-dashboard">
       <GameSettingsAndRules />
-      <GameButtons
-        currentPlayer={currentPlayer}
-        setPlayersScore={setPlayersScore}
-        changePlayer={setCurrentPlayer}
-        playersScore={playersScore}
-      />
+
       {playersData.map((data, index) => {
         return (
           <PlayerCard
@@ -44,6 +39,12 @@ export default function GameDashboard() {
           />
         );
       })}
+      <GameButtons
+        currentPlayer={currentPlayer}
+        setPlayersScore={setPlayersScore}
+        changePlayer={setCurrentPlayer}
+        playersScore={playersScore}
+      />
     </section>
   );
 }
