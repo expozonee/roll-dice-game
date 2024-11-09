@@ -2,17 +2,7 @@ import "./GameDashboard.css";
 import PlayerCard from "../PlayerCard/PlayerCard";
 import GameButtons from "../GameButtons/GameButtons";
 import { useGameContext } from "../../Providers/GameProvider";
-
-const playersData = [
-  {
-    id: 1,
-    name: "Player 1",
-  },
-  {
-    id: 2,
-    name: "Player 2",
-  },
-];
+import playersData from "../../data/players.json";
 
 export default function GameDashboard() {
   const { useCurrentPlayer, usePlayersScore, useGameSettings } =
