@@ -13,6 +13,7 @@ type GameProviderProps = {
 };
 
 type GameContext = {
+  isThereAWinner: boolean;
   useCurrentPlayer: () => [
     CurrentPlayerIndex,
     React.Dispatch<React.SetStateAction<CurrentPlayerIndex>>
@@ -55,6 +56,10 @@ export default function GameProvider({ children }: GameProviderProps) {
     diceOne: 1,
     diceTwo: 2,
   });
+
+  const isThereAWinner = playersScore.some(
+    (playerScore) => playerScore.isWinner
+  );
 
   function useCurrentPlayer() {
     return [currentPlayer, setCurrentPlayer] as [
@@ -113,6 +118,7 @@ export default function GameProvider({ children }: GameProviderProps) {
   return (
     <GameContext.Provider
       value={{
+        isThereAWinner,
         useCurrentPlayer,
         usePlayersScore,
         useDices,

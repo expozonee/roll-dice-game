@@ -1,6 +1,7 @@
+import "./PlayerCard.css";
 import PlayerScore from "./PlayerCurrentScore";
 import PlayerCardHeader from "./PlayerCardHeader";
-import "./PlayerCard.css";
+import { useGameContext } from "../../Providers/GameProvider";
 
 // types
 import type { PlayerCardProps } from "../../types/PlayerCardProps";
@@ -9,8 +10,9 @@ export default function PlayerCard({
   title,
   isCurrentPlayer,
   playerScore,
-  isThereAWinner,
 }: PlayerCardProps) {
+  const { isThereAWinner } = useGameContext();
+
   return (
     <div
       style={{

@@ -13,7 +13,7 @@ export default function GameSettingsAndRules() {
 
   return (
     <div className="game-rules-settings">
-      <h1>Welcome to Game dice game!</h1>
+      <h1>Welcome to dice game!</h1>
       <GameRules />
       <GameSettings setGameSettings={setGameSettings} />
     </div>
