@@ -6,7 +6,6 @@ import type { GameButtonsProps } from "../../types/GameButtonsProps";
 
 export default function GameButtons({
   currentPlayer,
-  // playersScore,
   setPlayersScore,
   changePlayer,
 }: GameButtonsProps) {
@@ -15,10 +14,6 @@ export default function GameButtons({
   const [dices, setDices] = useDices();
   const [gameSettings] = useGameSettings();
   const maxScore = +gameSettings.maxScore!;
-
-  // const isThereAWinner = playersScore.some(
-  //   (playerScore) => playerScore.isWinner
-  // );
 
   function RollDiceHandleClick() {
     const randomNumber1 = Math.floor(Math.random() * 6) + 1;
