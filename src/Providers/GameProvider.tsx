@@ -30,31 +30,6 @@ type GameContext = {
   resetGame: () => void;
 };
 
-const intialPlayersScore = [
-  {
-    playerId: 1,
-    score: 0,
-    currentScore: 0,
-    isWinner: false,
-  },
-  {
-    playerId: 2,
-    score: 0,
-    currentScore: 0,
-    isWinner: false,
-  },
-];
-
-const intialDices = {
-  diceOne: 1,
-  diceTwo: 2,
-};
-
-const intialGameSettings = {
-  isGameStarted: false,
-  maxScore: null,
-};
-
 const GameContext = createContext<GameContext | null>(null);
 
 export default function GameProvider({ children }: GameProviderProps) {
@@ -116,9 +91,28 @@ export default function GameProvider({ children }: GameProviderProps) {
 
   function resetGame() {
     setCurrentPlayer(1);
-    setPlayersScore(intialPlayersScore);
-    setDices(intialDices);
-    setGameSettings(intialGameSettings);
+    setPlayersScore([
+      {
+        playerId: 1,
+        score: 0,
+        currentScore: 0,
+        isWinner: false,
+      },
+      {
+        playerId: 2,
+        score: 0,
+        currentScore: 0,
+        isWinner: false,
+      },
+    ]);
+    setDices({
+      diceOne: 1,
+      diceTwo: 2,
+    });
+    setGameSettings({
+      isGameStarted: false,
+      maxScore: null,
+    });
   }
 
   return (
