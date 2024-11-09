@@ -4,5 +4,4 @@ export type PlayerCardProps = {
   title: string;
   playerScore: PlayerScoreType;
   isCurrentPlayer: boolean;
-  isThereAWinner: boolean;
 };

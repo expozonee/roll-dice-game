@@ -21,10 +21,6 @@ export default function GameDashboard() {
   const [playersScore, setPlayersScore] = usePlayersScore();
   const [gameSettings] = useGameSettings();
 
-  const isThereAWinner = playersScore.some(
-    (playerScore) => playerScore.isWinner
-  );
-
   return (
     <section className="game-dashboard">
       <p className="max-score">The max score is: {+gameSettings.maxScore!}</p>
@@ -36,7 +32,6 @@ export default function GameDashboard() {
             title={data.name}
             playerScore={playersScore[index]}
             isCurrentPlayer={currentPlayer === index + 1}
-            isThereAWinner={isThereAWinner}
           />
         );
       })}

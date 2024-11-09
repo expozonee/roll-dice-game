@@ -15,6 +15,10 @@
   text-align: center;
 }
 
+.game-rules-settings h1 {
+  font-size: 3rem;
+}
+
 .game-rules-settings li {
   text-align: left;
 }
