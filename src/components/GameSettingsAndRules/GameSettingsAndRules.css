@@ -25,7 +25,7 @@
 
 @media (max-width: 1000px) {
   .game-rules-settings {
-    height: 85dvh;
+    /* height: 85dvh; */
     padding: 1rem;
   }
 
