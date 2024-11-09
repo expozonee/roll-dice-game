@@ -59,11 +59,28 @@ const GameContext = createContext<GameContext | null>(null);
 
 export default function GameProvider({ children }: GameProviderProps) {
   const [currentPlayer, setCurrentPlayer] = useState<CurrentPlayerIndex>(1);
-  const [gameSettings, setGameSettings] =
-    useState<GameSettings>(intialGameSettings);
-  const [playersScore, setPlayersScore] =
-    useState<PlayerScoreType[]>(intialPlayersScore);
-  const [dices, setDices] = useState<Dice>(intialDices);
+  const [gameSettings, setGameSettings] = useState<GameSettings>({
+    isGameStarted: false,
+    maxScore: null,
+  });
+  const [playersScore, setPlayersScore] = useState<PlayerScoreType[]>([
+    {
+      playerId: 1,
+      score: 0,
+      currentScore: 0,
+      isWinner: false,
+    },
+    {
+      playerId: 2,
+      score: 0,
+      currentScore: 0,
+      isWinner: false,
+    },
+  ]);
+  const [dices, setDices] = useState<Dice>({
+    diceOne: 1,
+    diceTwo: 2,
+  });
 
   const isThereAWinner = playersScore.some(
     (playerScore) => playerScore.isWinner

@@ -33,6 +33,7 @@ export default function GameSettings({
           type="text"
           name="max-score"
           id="max-score"
+          inputMode="numeric"
           placeholder="Enter max score"
         />
         <button type="submit" className="start-game-btn">
