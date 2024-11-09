@@ -68,6 +68,10 @@ img {
     font-weight: 700;
   }
 
+  button:disabled {
+    opacity: 0.6;
+  }
+
   button:nth-of-type(1) {
     grid-area: new;
 
