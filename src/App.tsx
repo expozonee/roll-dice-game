@@ -7,17 +7,13 @@ function App() {
   const { useGameSettings } = useGameContext();
   const [gameSettings] = useGameSettings();
 
-  if (!gameSettings.isGameStarted) {
-    return (
-      <article>
-        <GameSettingsAndRules />
-      </article>
-    );
-  }
-
   return (
     <article>
-      <GameDashboard />
+      {gameSettings.isGameStarted ? (
+        <GameDashboard />
+      ) : (
+        <GameSettingsAndRules />
+      )}
     </article>
   );
 }
