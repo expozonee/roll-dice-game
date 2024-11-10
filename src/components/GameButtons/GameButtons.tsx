@@ -46,6 +46,8 @@ export default function GameButtons({
   }
 
   function HoldBtnHandleClick() {
+    setRollDiceLimit(5);
+
     setPlayersScore((prev) => {
       const playersScore = [...prev];
       playersScore[currentPlayer - 1].score =
