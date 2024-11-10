@@ -29,6 +29,6 @@
   }
 
   .game-rules-settings h1 {
-    font-size: clamp(1rem, 4vw, 4rem);
+    font-size: clamp(1.4rem, 4vw, 4rem);
   }
 }
