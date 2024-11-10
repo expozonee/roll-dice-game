@@ -5,28 +5,20 @@ export default function GameRules() {
     <div className="game-rules">
       <h3>Game Rules</h3>
       <ul>
+        <li>Set your max score on the first page to start the game.</li>
         <li>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, aut?
+          Players take turns clicking the "Roll Dice" button. Each player gets 5
+          rolls per turn.
         </li>
         <li>
-          Alias, magnam velit quis aspernatur voluptatem voluptatibus fugit.
-          Sequi, voluptates?
+          Add the total of the dice to your current score. If both dice show the
+          same number, your current score resets to 0.
         </li>
         <li>
-          Enim sed ad magni reiciendis? Iure laborum reprehenderit magnam illo?
+          Press "Hold" to keep your score and end your turn. The turn will pass
+          to the other player.
         </li>
-        <li>
-          Illo laborum repellendus tempore pariatur assumenda debitis temporibus
-          officia eius?
-        </li>
-        <li>Sequi dicta ipsum itaque at, nobis atque quidem fugit porro?</li>
-        <li>
-          Perspiciatis laboriosam suscipit est similique magni sint tempora
-          pariatur nobis.
-        </li>
-        <li>
-          Libero obcaecati odio modi rem dicta ipsum officiis iste ducimus!
-        </li>
+        <li>The first player to reach the max score wins the game.</li>
       </ul>
     </div>
   );
