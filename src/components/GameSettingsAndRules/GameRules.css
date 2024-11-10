@@ -9,3 +9,7 @@ ul {
 .game-rules li {
   font-size: clamp(0.7rem, 1.8vh, 1.5rem);
 }
+
+.game-rules li:not(:last-of-type) {
+  margin-bottom: 0.6rem;
+}
