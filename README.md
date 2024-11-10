@@ -8,7 +8,7 @@ This is a simple dice game built with React and Vite, where two players take tur
 - **Turns**: Players take turns by clicking the "Roll Dice" button.
   - Each player gets **5 rolls** per turn.
   - After each roll, the total value of both dice is added to the player's score.
-  - If both dice show the **same number**, the player's score for that turn resets to **0**.
+  - If both dice show the **same number**, the player's current score for that turn resets to **0**.
 - **Hold**: Players can click the "Hold" button to keep their score for that turn and pass the turn to the other player.
 - **Winning**: The first player to reach the set **max score** wins the game.
 
