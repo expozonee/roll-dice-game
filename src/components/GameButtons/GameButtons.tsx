@@ -1,4 +1,5 @@
 import "./GameButtons.css";
+import { useState } from "react";
 import { useGameContext } from "../../Providers/GameProvider";
 
 // types
@@ -13,9 +14,16 @@ export default function GameButtons({
     useGameContext();
   const [dices, setDices] = useDices();
   const [gameSettings] = useGameSettings();
+  const [rollDiceLimit, setRollDiceLimit] = useState(5);
   const maxScore = +gameSettings.maxScore!;
 
   function RollDiceHandleClick() {
+    if (rollDiceLimit > 0) {
+      setRollDiceLimit((prev) => prev - 1);
+    }
+
+    if (rollDiceLimit === 0) return;
+
     const randomNumber1 = Math.floor(Math.random() * 6) + 1;
     const randomNumber2 = Math.floor(Math.random() * 6) + 1;
 
@@ -67,8 +75,11 @@ export default function GameButtons({
       <img src={`images/dice-${dices.diceOne}.png`} alt="dice-image" />
       <img src={`images/dice-${dices.diceTwo}.png`} alt="dice-image" />
 
-      <button disabled={isThereAWinner} onClick={RollDiceHandleClick}>
-        Roll Dice
+      <button
+        disabled={isThereAWinner || rollDiceLimit === 0}
+        onClick={RollDiceHandleClick}
+      >
+        Roll Dice ({rollDiceLimit})
       </button>
       <button disabled={isThereAWinner} onClick={HoldBtnHandleClick}>
         Hold
